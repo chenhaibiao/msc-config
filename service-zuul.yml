@@ -23,7 +23,7 @@ zuul:
       serviceId: eam
     api-b:
       path: /api-b/**
-      serviceId: service-client
+      serviceId: eureka-client
   sensitive-headers: Origin
   ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin
 
@@ -48,6 +48,6 @@ zuul:
       serviceId: eam
     api-b:
       path: /api-b/**
-      serviceId: service-client
+      serviceId: eureka-client
   sensitive-headers: Origin
   ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin
