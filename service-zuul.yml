@@ -18,12 +18,12 @@ logging:
   file: ./service-zuul.log
 zuul:
   routes:
-	api-a:
-	  path: /api-a/**
-	  serviceId: eam
-	api-b:
-	  path: /api-b/**
-	  serviceId: service-client
+    api-a:
+      path: /api-a/**
+	    serviceId: eam
+	  api-b:
+	    path: /api-b/**
+	    serviceId: service-client
 	sensitive-headers: Origin,origin
 	ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin,Origin,Vary,X-Frame-Options
 
@@ -43,11 +43,11 @@ logging:
   file: ./service-zuul.log
 zuul:
   routes:
-	api-a:
-	  path: /api-a/**
-	  serviceId: eam
-	api-b:
-	  path: /api-b/**
-	  serviceId: service-client
+	  api-a:
+	    path: /api-a/**
+	    serviceId: eam
+	  api-b:
+	    path: /api-b/**
+	    serviceId: service-client
 	sensitive-headers: Origin
 	ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin
