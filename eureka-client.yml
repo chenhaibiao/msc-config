@@ -1,21 +1,14 @@
-spring:
-  profiles:
-    active: dev
-
 ---
-server:
-  port: 8762
-
 spring:
   profiles: dev
   application:
     name: eureka-client
-
+server:
+  port: 8762
 eureka: 
   client: 
     service-url: 
       defaultZone: http://localhost:8761/eureka/
-
 logging:
   path: ./eureka-client
   file: ./eureka-client.log
@@ -25,15 +18,12 @@ spring:
   profiles: test
   application:
     name: eureka-client
-
 server:
   port: 8762
-
 eureka: 
   client: 
     service-url: 
       defaultZone: http://localhost:8761/eureka/
-
 logging:
   path: ./eureka-client
   file: ./eureka-client.log
