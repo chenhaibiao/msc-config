@@ -1,0 +1,60 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+server: 
+  port: 8769
+
+spring:
+  profiles: dev
+  application:
+    name: service-zuul
+
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: eam
+    api-b:
+      path: /api-b/**
+      serviceId: service-client
+  #sensitive-headers: Origin,origin
+  #ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin,Origin,Vary,X-Frame-Options
+
+logging:
+  path: ./service-zuul
+  file: ./service-zuul.log
+---
+server: 
+  port: 8769
+
+spring:
+  profiles: test
+  application:
+    name: service-zuul
+
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: eam
+    api-b:
+      path: /api-b/**
+      serviceId: service-client
+  #sensitive-headers: Origin,origin
+  #ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin,Origin,Vary,X-Frame-Options
+
+logging:
+  path: ./service-zuul
+  file: ./service-zuul.log
