@@ -33,7 +33,7 @@ spring:
   application:
     name: service-zuul
 server:
-  port: 8770
+  port: 8769
 eureka: 
   client: 
     service-url: 
@@ -49,5 +49,5 @@ zuul:
     api-b:
       path: /api-b/**
       serviceId: eureka-client
-  sensitive-headers: Origin
-  ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin
+#  sensitive-headers: Origin
+#  ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin
