@@ -25,7 +25,7 @@ zuul:
       path: /api-b/**
       serviceId: eureka-client
   sensitive-headers: Origin
-  ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin
+#  ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin
 
 ---
 spring:
