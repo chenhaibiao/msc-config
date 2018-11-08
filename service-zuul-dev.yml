@@ -1,7 +1,7 @@
 spring:
   profiles:
-    active:
-    - dev
+    active: dev
+
 ---
 server: 
   port: 8769
@@ -30,6 +30,7 @@ zuul:
 logging:
   path: ./service-zuul
   file: ./service-zuul.log
+
 ---
 server: 
   port: 8769
