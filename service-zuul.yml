@@ -7,6 +7,12 @@ spring:
   profiles: dev
   application:
     name: service-zuul
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
 server:
   port: 8769
 eureka: 
@@ -32,6 +38,12 @@ spring:
   profiles: test
   application:
     name: service-zuul
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
 server:
   port: 8769
 eureka: 
